@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class PublisherReflex < ApplicationReflex
+
+	
   def publish
     post = Post.find(element.dataset[:post_id])
     post.update(published: true, published_at: Time.now)
