@@ -71,8 +71,8 @@
 						  					Click to add content.
 						  				<% end %>
 						  			</div>
-						  			<div class="paragraph-form d-none " id='element-<%= element.id %>'>
-							  			<%= form_with(model: [@post, element]) do |form| %>
+						  			<div class="paragraph-form d-none" id="element-<%= element.id %>-form">
+							  			<%= form_with(model: [@post, element], local: false) do |form| %>
 									  		<%= form.rich_text_area :content %>
 									  		<div class="mt-3 d-flex justify-content-between">
 									  			<div>
